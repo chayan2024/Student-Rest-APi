@@ -1,31 +1,21 @@
 package org.example.studentrestapi.model;
-// Student.java
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-@Entity
 public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
     private int age;
 
-    public Student() {}
-
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Student(int _id, String _name, int _age) {
+        this.id = _id;
+        this.name = _name;
+        this.age = _age;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
